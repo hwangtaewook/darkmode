@@ -1,16 +1,21 @@
+import 'package:darkmode/src/controller/theme_controller.dart';
 import 'package:darkmode/src/page/home.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends GetView<ThemeController> {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: lighMode,
-      darkTheme: darkMode,
-      home: const Home(),
+    return Obx(
+      () => GetMaterialApp(
+        title: 'Flutter Demo',
+        theme: lighMode,
+        darkTheme: darkMode,
+        themeMode: controller.themeMode.value,
+        home: const Home(),
+      ),
     );
   }
 }

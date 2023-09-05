@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
 }
 
 class _HeaderWidget extends StatelessWidget {
-  const _HeaderWidget({super.key});
+  const _HeaderWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +72,7 @@ class _HeaderWidget extends StatelessWidget {
 }
 
 class _Description extends StatelessWidget {
-  const _Description({super.key});
+  const _Description();
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +106,7 @@ class _Description extends StatelessWidget {
 }
 
 class _AgreementBox extends StatefulWidget {
-  const _AgreementBox({super.key});
+  const _AgreementBox();
 
   @override
   State<_AgreementBox> createState() => _AgreementBoxState();
